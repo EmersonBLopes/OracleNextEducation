@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<form>
+	<input id="campoNome" type="text" name="Nome" placeholder="Digite o seu nome"/>
+	<input id="campoAltura" type="text" name="altura" placeholder="Digite a sua altura"/>
+	<input id="campoPeso" type="text" name="peso" placeholder="Digite o seu peso"/>
+</form>
+<button id="envia">Enviar</button>
+
+
+<script>
+	var botao = document.getElementById("envia");
+	var nome,altura,peso;
+	
+	function calculaImc(altura,peso){
+		return peso / (altura*altura);
+	}
+	
+	function pegaDados(nome,altura,peso){
+	
+		nome = document.getElementById("campoNome");
+		altura = document.getElementById("campoAltura");
+		peso = document.getElementById("campoPeso");
+		
+		document.write( "<h1>"+nome.value+", seu Imc é:" +calculaImc(parseFloat(altura.value),parseFloat(peso.value))+"</h1>");
+		
+		return;
+	}
+	
+	botao.addEventListener("click",pegaDados);
+	
+
+	//var altura = parseInt(inputs["altura"]);
+	//var peso = parseInt(inputs["peso"]);
+	
+
+</script>
