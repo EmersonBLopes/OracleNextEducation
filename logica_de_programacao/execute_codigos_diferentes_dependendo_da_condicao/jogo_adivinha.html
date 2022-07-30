@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	var numeroGerado,valorInserido;
+
+	function sorteia(n){
+		numeroGerado = Math.round(Math.random()*n);
+	}
+	
+	sorteia(parseInt(prompt("Digite o número máximo do sorteio:")));
+
+	console.log(numeroGerado);
+	valorInserido = parseInt(prompt("Chute um número:"));
+	
+	if(valorInserido == numeroGerado){
+		document.write("<big>Parabéns, você acertou!</big>");
+	}else if(valorInserido < numeroGerado){
+		document.write("<big>Você errou, o número escolhido é maior do que o valor digitado. tente novamente.</big>");
+	}else{
+		document.write("<big>Você errou, o número escolhido é menor do que o valor digitado. tente novamente.</big>")
+	}
+	
+</script>

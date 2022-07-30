@@ -10,24 +10,38 @@
 
 <script>
 	var botao = document.getElementById("envia");
-	var nome,altura,peso;
+	var nome,altura,peso,imc;
 	
-	function calculaImc(altura,peso){
+	function apresentar(){
+		
+		document.write( "<h1>"+nome.value+", seu Imc é:" +imc+"</h1><br>");
+		
+		if(imc < 18.5){
+			document.write("<h2>Você está abaixo do recomendado</h2>");
+			
+		}else if(imc > 35){
+			document.write("<h2>Você está acima do recomendado</h2>");
+		}else{
+			document.write("<h2>Você está na faixa ideal</h2>")
+		}
+	
+	}
+	
+	function calcularImc(altura,peso){
 		return peso / (altura*altura);
 	}
 	
-	function pegaDados(nome,altura,peso){
+	function pegarDados(){
 	
 		nome = document.getElementById("campoNome");
 		altura = document.getElementById("campoAltura");
 		peso = document.getElementById("campoPeso");
+		imc = calcularImc(parseFloat(altura.value),parseFloat(peso.value))
 		
-		document.write( "<h1>"+nome.value+", seu Imc é:" +calculaImc(parseFloat(altura.value),parseFloat(peso.value))+"</h1>");
-		
-		return;
+		apresentar();
 	}
 	
-	botao.addEventListener("click",pegaDados);
+	botao.addEventListener("click",pegarDados);
 	
 
 	//var altura = parseInt(inputs["altura"]);
