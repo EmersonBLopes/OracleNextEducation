@@ -1,3 +1,3 @@
-<img src="src/capa.png"  alt="Capa do readme"/>
+<img src="src/capa.svg"  alt="Capa do readme"/>
 
 ## Introdução
