@@ -1,4 +1,4 @@
-<img src="src/capa.png"  alt="Capa do readme"/>
+![](src/capa.svg)
 
-## Introdução
-- Repositório com atividades realizadas durante o curso ONE (Oracle Next Education).
+## Trilhas
+
