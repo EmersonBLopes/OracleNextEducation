@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha(){
+		document.write("<br>");
+		return;
+	}
+	
+	function mostra(geracoes,anosPassados){
+		
+		document.write("Se passaram "+anosPassados+" anos desde o descobrimento.");
+		pulaLinha();
+		
+		document.write("Atualment estamos na "+Math.round(geracoes)+"° geração");
+
+	}
+	
+	function calculaGeracoes(anoDescobrimento, anoAtual){
+		
+		anosPassados = anoAtual - anoDescobrimento;
+		numeroGeracoes = anosPassados / 28;
+		
+		mostra(numeroGeracoes,anosPassados);
+		return;
+	}
+	
+	var anoDescobrimento = 1500;
+	var anoAtual = new Date();
+	
+	calculaGeracoes(anoDescobrimento, parseInt(anoAtual.getFullYear()));
+	
+	
+</script>

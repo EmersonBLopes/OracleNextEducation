@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Chutar</button>
+
+
+<script>
+	
+	var entrada = document.querySelector("input");
+	var button = document.querySelector("button");
+	var numerosGerados = new Array();
+	
+	function compararNumeros(numeroAleatorio){
+		
+		var achou = false;
+		
+		for(var count = 0; count < numerosGerados.length; count++ ){
+			if(numerosGerados[count] == numeroAleatorio || numeroAleatorio == 0){
+			
+				achou = true;
+				break;			
+			}
+		}
+		return achou;
+	}
+	
+	function gerarNumeros(numeroIndices){
+		
+		numerosGerados = [];
+		
+		var numeroAleatorio;
+		
+		for(var count = 1; count <= numeroIndices; count){
+		
+			numeroAleatorio = Math.round(Math.random()*10);
+			
+			if(!compararNumeros(numeroAleatorio)){
+				
+				numerosGerados.push(numeroAleatorio);
+				count++;
+		
+			}
+		}
+	}
+	
+	gerarNumeros(3);
+	
+	entrada.focus();
+	
+	function comparaEntrada(){
+	
+		for(count=0; count < numerosGerados.length; count++){
+		
+			if(entrada.value == numerosGerados[count]){
+				
+				alert("Você Acertou!");
+				gerarNumeros(3);
+				break
+				
+			}else if(count == numerosGerados.length-1){
+				alert("Você errou.");
+			}
+			
+		}
+		entrada.value = "";
+		entrada.focus();
+	}
+	
+	button.onclick = comparaEntrada;
+	
+
+</script>
