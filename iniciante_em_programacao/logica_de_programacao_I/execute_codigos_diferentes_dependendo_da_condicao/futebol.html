@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	var vitorias = parseInt(prompt("entre com o número de vitórias:"));
+	
+	var empates = parseInt(prompt("Entre com o número de empates:"))
+	
+	var pontos = vitorias * 3 + empates;
+	
+	document.write("<big>Os pontos do seu time é: "+pontos+"</big><br>")
+	
+	if(pontos>28){
+		document.write("<big>Seu time está melhor do que o ano passado</big>")
+	}else if(pontos==28){
+		document.write("<big>Seu time está igual ao ano passado</big>")
+	}else{
+		document.write("<big>Seu time está pior do que o ano passado</big>")
+	}
+	
+	
+</script>
