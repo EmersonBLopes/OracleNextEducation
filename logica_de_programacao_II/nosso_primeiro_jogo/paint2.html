@@ -1,0 +1,97 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	var x,y, corPincel;
+	
+    function desenhaQuadrado(x, y, tamanho, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, tamanho, tamanho)
+        pincel.fill();
+    }
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = corPincel;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+
+    }
+
+    function desenhaPaletaDeCores() {
+
+        desenhaQuadrado(xVermelho, yQuadrados, tamanhoQuadrados, 'red');
+        desenhaQuadrado(xVerde, yQuadrados, tamanhoQuadrados, 'green');
+        desenhaQuadrado(xAzul, yQuadrados, tamanhoQuadrados, 'blue');
+
+    }
+	
+		
+	function trocaCor(valores){
+		var clickX = valores.pageX - tela.offsetLeft,
+			clickY = valores.pageY - tela.offsetTop;
+		
+		if((clickX > 0 && clickX < 50) && (clickY > 0 && clickY < 50)){
+			corPincel = "red";
+		}
+		
+		if((clickX > 50 && clickX < 100) && (clickY > 0 && clickY < 50)){
+			corPincel = "green"
+		}
+		
+		if((clickX > 100 && clickX < 150) && (clickY > 0 && clickY < 50)){
+			corPincel = "blue"
+		}
+	}
+
+    function lidaComMovimentoDoMouse(evento) {
+
+        x = evento.pageX - tela.offsetLeft;
+        y = evento.pageY - tela.offsetTop;
+
+        if(desenha) {
+
+            desenhaCirculo(x, y, 5, corAtual);
+        }
+    }
+
+    function habilitaDesenhar(evento) {
+		console.log(x,y);
+		if(!((x >= 0 && x <= 150 + 5) && (y >= 0 && y <= 50 + 5))){
+			desenha = true;
+		}
+    }
+
+    function desabilitaDesenhar() {
+
+        desenha = false;
+    }
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var desenha = false;
+    var corAtual = corPincel;
+    var xVermelho = 0;
+    var xVerde  = 50;
+    var xAzul = 100;
+    var yQuadrados = 0;
+    var tamanhoQuadrados = 50;
+
+    desenhaPaletaDeCores(); // mostra os quadrados de seleção de cores
+
+    tela.onmousemove = lidaComMovimentoDoMouse;
+
+    tela.onmousedown = habilitaDesenhar;
+
+    tela.onmouseup = desabilitaDesenhar;
+	
+	tela.onclick = trocaCor;
+
+</script>

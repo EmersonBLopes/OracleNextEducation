@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha(){
+		
+		document.write("<br><hr><br>");
+		
+		return
+	}
+	
+	function mostra(frase){
+		
+		document.write("<big>"+frase+"</big>");
+		pulaLinha();
+		
+	}
+	
+	var ano = new Date();
+	
+	mostra("Eu nasci em: "+(ano.getFullYear()-25));
+	mostra("Adriano nasceu em: "+(ano.getFullYear()-26));
+	mostra("Paulo nasceu em: "+(ano.getFullYear()-32));
+
+</script>
