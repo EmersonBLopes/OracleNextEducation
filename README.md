@@ -4,7 +4,7 @@
 
 ### Iniciante em programação:
 
-#### Aprender a lógica de programação
+#### Aprender a lógica de programação ![](https://img.shields.io/badge/-Completo-sucess)
 
 - Lógica de programação I
 - Lógica de programação II
@@ -19,7 +19,7 @@
 
 - HTML 5 e CSS3 parte 4: avançado no CSS
 
-#### Ganhar experiência com o Git
+#### Ganhar experiência com o Git ![](https://img.shields.io/badge/-Completo-sucess)
 
 - Git e GitHub: controle e compartilha seu código
 
