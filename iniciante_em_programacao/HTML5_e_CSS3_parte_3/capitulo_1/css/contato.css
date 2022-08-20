@@ -32,50 +32,27 @@ nav a:hover{
 	color: #c78c19;
 	text-decoration: underline;
 }
-.lista-de-produtos{
-	width:940px;
-	margin:0 auto;
-	padding: 50px 0;
+
+main{
+    width: 940px;
+    margin: 0 auto;
 }
 
-.lista-de-produtos li{
-	width:30%;
-	text-align:center;
-	vertical-align:top;
-	margin: 0 1.5%;
-	padding: 30px 20px;	
-	display:inline-block;
-	box-sizing:border-box;
-	border: 3px solid #000;
-	border-radius:10px;
+form{
+  margin: 40px 0;
 }
 
-.lista-de-produtos li:hover{
-	border-color: #c78c19;
+form label{
+  display:block;
+  font-size: 20px;
+  margin:0 0 10px;
 }
 
-.lista-de-produtos li:active{
-	border-color: #088c19;
-}
-
-.lista-de-produtos li:hover h2{
-	font-size:34px;
-}
-	
-
-.lista-de-produtos h2{
-	font-size:30px;
-	font-weight:bold;
-}
-
-.descricao{
-	font-size:18px;
-}
-
-.preco{
-	font-size:22px;
-	font-weight:bold;
-	padding:10px;
+form input{
+  display:block;
+  margin: 0 0 20px;
+  padding:10px 25px;
+  width:50%;
 }
 
 footer{
