@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="./../css/reset.css">
+    <link rel="stylesheet" href="./../css/contato.css">
+  </head>                 
+  <body>
+		<header>
+			<div class="caixa">
+				<h1><img src="./../img/logo.png" alt="Logo de cor preta da barberaria alura"/></h1>
+				<nav>
+					<ul>
+						<a href="./../index.html"><li>Home</li></a>
+						<a href="./produtos.html"><li>Produtos</li></a>
+						<a href="https://www.google.com.br" target="_black"><li>Contato</li></a>
+					</ul>
+				</nav>
+			</div>
+		</header>
+    <main>
+      <form>
+
+        <label for="nome">Nome</label>
+        <input type="text" class="input-padrao"  placeholder="Digite o seu nome completo" id="nome"/>
+
+        <label for="email">email</label>
+        <input type="text" class="input-padrao" placeholder="digite o seu e-mail" id="email"/>
+
+        <label for="telefone">telefone</label>
+        <input type="text" class="input-padrao" placeholder="digite o seu telefone" id="telefone"/>
+
+          <label for="mensagem">Mensagem</label> 
+        <textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
+
+        <p>Como prefere o nosso contato?</p>
+
+        <div>
+          <label for="email-radio"><input type="radio" id="email-radio" name="contato"/>
+E-mail</label>
+          
+          <label for="tel-radio"><input type="radio" id="tel-radio" name="contato"/>Telefone</label>
+          
+
+          <label for="whatsapp-radio"><input type="radio" id="whatsapp-radio" name="contato"/>Whatsapp</label>
+        </div>
+                
+        <div>
+          <p>Qual horário você prefere ser atendido?</p>
+          <select>
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Noite</option>
+          </select>
+        </div>
+
+        <label for="checkbox"><input type="checkbox" class="checkbox"/>
+          Gostaria de receber nossas novidades por E-mail?</label>
+        <input type="submit" value="enviar"/>
+        
+      </form>
+    </main>
+    <footer>
+			<img src="./../img/logo-branco.png" alt="logo branco barbearia alura"/>
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+		</footer>
+  </body>
+<html>
+
+
