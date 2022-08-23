@@ -23,28 +23,29 @@
       <form>
 
         <label for="nome">Nome</label>
-        <input type="text" class="input-padrao"  placeholder="Digite o seu nome completo" id="nome"/>
+        <input type="text" class="input-padrao"  placeholder="Digite o seu nome completo" id="nome" required/>
 
         <label for="email">email</label>
-        <input type="email" class="input-padrao" placeholder="digite o seu e-mail" id="email"/>
+        <input type="email" class="input-padrao" placeholder="digite o seu e-mail" id="email" required/>
 
         <label for="telefone">telefone</label>
-        <input type="tel" class="input-padrao" placeholder="digite o seu telefone" id="telefone"/>
+        <input type="tel" class="input-padrao" placeholder="digite o seu telefone" id="telefone" required/>
 
           <label for="mensagem">Mensagem</label> 
-        <textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
+        <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
 
-        <p>Como prefere o nosso contato?</p>
+        
+        <fieldset>
+          <legend>Como prefere o nosso contato?</legend>
 
-        <div>
           <label for="email-radio"><input type="radio" id="email-radio" name="contato"/>
 E-mail</label>
           
           <label for="tel-radio"><input type="radio" id="tel-radio" name="contato"/>Telefone</label>
           
 
-          <label for="whatsapp-radio"><input type="radio" id="whatsapp-radio" name="contato"/>Whatsapp</label>
-        </div>
+          <label for="whatsapp-radio"><input type="radio" id="whatsapp-radio" name="contato" checked/>Whatsapp</label>
+        </fieldset>
                 
         <div>
           <p>Qual horário você prefere ser atendido?</p>
