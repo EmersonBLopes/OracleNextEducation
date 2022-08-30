@@ -1,0 +1,60 @@
+header{
+	background:#bbb;
+	padding: 20px 0;
+}
+
+.caixa{
+	width:940px;
+	position:relative;
+	margin:0 auto;
+}
+
+nav{
+	position:absolute;
+	top:110px;
+	right:0;
+}
+
+nav li{
+	display:inline;
+	margin:0 0 0 15px; 
+}
+
+nav a{
+	text-decoration:none;
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+}
+
+.lista-de-produtos{
+	width:940px;
+	margin:0 auto;
+	padding: 50px 0;
+}
+
+.lista-de-produtos li{
+	width:30%;
+	text-align:center;
+	vertical-align:top;
+	margin: 0 1.5%;
+	padding: 30px 20px;	
+	display:inline-block;
+	box-sizing:border-box;
+}
+
+.lista-de-produtos h2{
+	font-size:30px;
+	font-weight:bold;
+}
+
+.descricao{
+	font-size:18px;
+}
+
+.preco{
+	font-size:22px;
+	font-weight:bold;
+	padding:10px;
+}
