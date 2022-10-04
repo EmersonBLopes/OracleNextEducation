@@ -3,3 +3,31 @@
 	align-items:center;
 	justify-content:space-between;
 }
+.cabecalhoPrincipal-nav{
+   display:flex;
+}
+
+.rodapePrincipal-patrocinadores .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+  display:flex;
+  align-items:center;
+  width:70%;
+  margin-right:5%;
+  justify-content:space-around;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+  display:flex;
+}
+
+.rodapePrincipal-navMap-list{
+  height:252px;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+}
