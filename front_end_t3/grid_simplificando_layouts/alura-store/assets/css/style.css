@@ -6,21 +6,18 @@
       "cabecalho"
       "conteudo"
       "rodape";
-    grid-template-rows:200px 100vh auto;
+    grid-template-rows:50px 100vh auto;
 }
 
 .cabecalho {
-  background:red;
   grid-area:cabecalho;
 }
 
  
 .conteudo {
-  background:green;
   grid-area:conteudo;
 }
 
 .rodape {
-  background:blue;
   grid-area:rodape;
 }
