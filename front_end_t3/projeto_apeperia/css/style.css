@@ -1,0 +1,29 @@
+/* importacao da fontes utilizados no projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap');
+
+/*declaracao das variaveis*/
+
+:root{
+  --branco:#fff;
+  --azul-claro:#DFE3E5;
+  --vermelho-forte:#B72E2E;
+  --cinza-escuro:#4F4C4C;
+  --cinza-claro:#F7F4F4;
+  --cinza-medio:#D9D9D9;
+
+  --font-link:#0084FF;
+  --font-cinza:#666;
+  --borda-cabecalho-mobile:#103D4A;
+  --bg-rodape:#333;
+  --bg-chamada-mobile:#00161C;
+
+  --planos-cartao-start:#56CCF2;
+  --planos-cartao-ultra:#B04CD9;
+  --planos-cartao-mega:#E33B3B;
+}
+
+/* estilizacao da pagina*/
+
+html{
+  font-family:'Open Sans', sans-serif;
+}
