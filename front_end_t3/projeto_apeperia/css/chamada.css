@@ -13,7 +13,7 @@
 }
 
 .chamada__titulo {
-    font-family:var(--montserrat); 
+    font-family: var(--montserrat);
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
