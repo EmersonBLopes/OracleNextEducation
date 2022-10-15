@@ -104,3 +104,21 @@
 .cartao__botao--mega {
     border-color: var(--planos-cartao-mega);
 }
+
+@media screen and (min-width:768px){
+  .cartao{
+    max-width:400px;
+  }
+}
+
+@media screen and (min-width:1024px){
+  .planos__cartoes{
+    flex-direction:row;
+    justify-content:space-around;
+  }
+
+  .cartao{
+    max-width:300px;
+  }
+}
+

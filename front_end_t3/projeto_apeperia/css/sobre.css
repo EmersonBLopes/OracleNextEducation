@@ -32,3 +32,33 @@
 
     margin-bottom: 1rem;
 }
+
+.sobre__texto--divisao{
+  display:none;
+}
+
+.sobre__imagem{
+  display:none;
+}
+
+@media screen and (min-width:1024px){
+  .sobre{
+    display:flex;
+  }
+
+  .sobre__titulo{
+    text-align:left;
+  }
+
+  .sobre__texto--divisao{
+    display:block;
+    border-color:var(--cinza-medio);
+    width:90%;
+    margin-bottom:1.5rem;
+  }
+
+  .sobre__imagem{
+    display:initial;
+    
+  }
+}
