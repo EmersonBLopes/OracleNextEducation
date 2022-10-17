@@ -1,0 +1,39 @@
+.carrosel{
+  background:url("../img/banner.jpg") no-repeat center/cover;
+  padding:10rem 10rem 0;
+  display:flex;
+  justify-content:space-between;
+  flex-direction:column;
+}
+.carrosel__titulo{
+  text-align:center;
+  color:#fff;
+  font: 5rem var(--fonte-principal);
+  text-shadow:0 8px 6px #000;
+}
+
+.indices__carrosel{
+  display:flex;
+  justify-content:center;
+}
+
+.indice{
+  display:inline;
+  margin-top:10rem;
+  margin-right:.5rem;
+}
+
+.indice__botao{
+  cursor:pointer;
+  background-color:#fff;
+  border:none;
+  border-radius:50%;
+  padding:10px;
+}
+
+.indice:first-child>.indice__botao{
+  background-color:var(--vermelho-principal);
+}
+.indice:last-child{
+  margin-right:0;
+}

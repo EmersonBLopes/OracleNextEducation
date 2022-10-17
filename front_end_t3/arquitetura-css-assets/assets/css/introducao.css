@@ -1,0 +1,16 @@
+.introducao{
+  width:55%;
+  max-width:856px;
+  text-align:center;
+  margin:4rem auto;
+}
+
+.introducao__titulo{
+  font:3rem var(--fonte-principal) ;
+  color:var(--vermelho-principal);
+}
+
+.introducao__descricao{
+  font:1.5rem var(--fonte-secundaria);
+  color:var(--cinza-claro);
+}
