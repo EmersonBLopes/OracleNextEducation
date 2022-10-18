@@ -1,0 +1,47 @@
+.receitas{
+  width:100%;
+  display:flex;
+  padding:2rem;
+  justify-content:center;
+  background-color:var(--cinza-background-receitas);
+}
+
+.receitas__cartoes{
+  display:grid;
+  max-width:1200px;
+  justify-content:center;
+  grid-template-rows:repeat(2,1fr);
+  grid-template-columns:repeat(3,25%);
+  grid-gap:2rem;
+}
+
+.receitas__cartao{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(2,1fr);
+  grid-template-areas:
+    "foto"
+    "sobre";
+  list-style:none;
+  background-color:#fff;
+  border:solid 1px #c4c4c4;
+}
+
+.receitas__foto{
+  width:100%;
+  grid-area:foto;
+}
+
+.receitas__sobre{
+  margin:1rem;
+  font-family:var(--fonte-secundaria);
+  text-transform:capitalize;
+}
+
+.receitas__titulo{
+  font-size:1.2rem;
+}
+
+.receitas__descricao{
+  width:80%;
+}
