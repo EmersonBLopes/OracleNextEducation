@@ -2,6 +2,7 @@
   width:100%;
   display:flex;
   padding:2rem;
+  box-sizing:border-box;
   justify-content:center;
   background-color:var(--cinza-background-receitas);
 }
@@ -44,4 +45,12 @@
 
 .receitas__descricao{
   width:80%;
+}
+
+.receitas__botao{
+  padding:.8rem .9rem;
+  background-color:var(--vermelho-principal);
+  color:#fff;
+  border:none;
+  border-radius:5%;
 }
