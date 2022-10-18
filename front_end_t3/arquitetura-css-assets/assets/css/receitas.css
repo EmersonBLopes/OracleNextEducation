@@ -1,7 +1,7 @@
 .receitas{
   width:100%;
   display:flex;
-  padding:2rem;
+  padding:2rem 0;;
   box-sizing:border-box;
   justify-content:center;
   background-color:var(--cinza-background-receitas);
@@ -9,6 +9,7 @@
 
 .receitas__cartoes{
   display:grid;
+  width:100%;
   max-width:1200px;
   justify-content:center;
   grid-template-rows:repeat(2,1fr);
@@ -53,4 +54,17 @@
   color:#fff;
   border:none;
   border-radius:5%;
+}
+
+@media screen and (max-width:840px){
+  .receitas__cartoes{
+    grid-template-columns:repeat(2,1fr);
+    margin:0 2rem;
+  }
+}
+
+@media screen and (max-width:620px){
+  .receitas__cartoes{
+    grid-template-columns:80%;
+  }
 }

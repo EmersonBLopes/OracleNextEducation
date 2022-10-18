@@ -16,6 +16,7 @@
 
 .quem-somos__time{
   width:80%;
+  max-width:1400px;
   display:flex;
   justify-content:space-around;
 }
@@ -38,4 +39,14 @@
   margin:0;
   font:1.5rem var(--fonte-secundaria);
   color:var(--cinza-claro);
+}
+
+@media screen and (max-width:1024px){
+  .quem-somos__time{
+    flex-direction:column;
+  }
+
+  .quem-somos__foto{
+    width:260px;
+  }
 }

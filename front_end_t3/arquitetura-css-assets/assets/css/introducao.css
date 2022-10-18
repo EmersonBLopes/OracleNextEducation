@@ -1,5 +1,4 @@
 .introducao{
-  width:55%;
   max-width:856px;
   text-align:center;
   margin:4rem auto;
@@ -13,4 +12,10 @@
 .introducao__descricao{
   font:1.5rem var(--fonte-secundaria);
   color:var(--cinza-claro);
+}
+
+@media screen and (max-width:840px){
+  .introducao__titulo{
+    font-size:2.5rem;
+  }
 }

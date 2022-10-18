@@ -1,6 +1,5 @@
 .carrosel{
   background:url("../img/banner.jpg") no-repeat center/cover;
-  padding:10rem 10rem 0;
   display:flex;
   justify-content:space-between;
   flex-direction:column;
@@ -10,6 +9,7 @@
   color:#fff;
   font: 5rem var(--fonte-principal);
   text-shadow:0 8px 6px #000;
+  margin:10rem 0;
 }
 
 .indices__carrosel{
@@ -19,7 +19,6 @@
 
 .indice{
   display:inline;
-  margin-top:10rem;
   margin-right:.5rem;
 }
 
@@ -34,6 +33,25 @@
 .indice__botao-ativo{
   background-color:var(--vermelho-principal);
 }
+
 .indice:last-child{
   margin-right:0;
+}
+
+@media screen and (max-width:1110px){
+  .carrosel{
+    justify-content:space-around;
+    padding:1rem 1rem 0;
+  }
+
+  .carrosel__titulo{
+    font-size:3rem;
+    margin:5rem 0;
+  }
+}
+
+@media screen and (max-width:840px){
+  .carrosel__titulo{
+    font-size:2.5rem
+  }
 }

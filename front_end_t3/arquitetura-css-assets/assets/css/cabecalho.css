@@ -5,3 +5,9 @@
   justify-content:space-between;
   padding:0 2rem;
 }
+
+@media screen and (max-width:530px){
+  .menu__navegacao{
+    display:none;
+  }
+}
