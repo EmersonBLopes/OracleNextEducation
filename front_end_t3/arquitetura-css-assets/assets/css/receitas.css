@@ -20,7 +20,6 @@
 .receitas__cartao{
   display:grid;
   grid-template-columns:1fr;
-  grid-template-rows:repeat(2,1fr);
   grid-template-areas:
     "foto"
     "sobre";
@@ -65,6 +64,6 @@
 
 @media screen and (max-width:620px){
   .receitas__cartoes{
-    grid-template-columns:80%;
+    grid-template-columns:1fr;
   }
 }

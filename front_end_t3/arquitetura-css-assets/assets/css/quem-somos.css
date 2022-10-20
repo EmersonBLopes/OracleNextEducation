@@ -46,7 +46,17 @@
     flex-direction:column;
   }
 
+  .quem-somos__item{
+    margin-bottom:2rem;
+  }
+
   .quem-somos__foto{
     width:260px;
+  }
+}
+
+@media screen and (max-width:375px){
+  .quem-somos__descricao{
+    font-size:1rem;
   }
 }
