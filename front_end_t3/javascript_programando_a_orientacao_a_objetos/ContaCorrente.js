@@ -1,19 +1,31 @@
+import {Cliente} from "./Cliente.js";
+
 export class ContaCorrente{
 
   //campo privado
   
   #saldo = 0;
+  #cliente;
 
   //campo público 
 
+  set cliente(cliente){
+    if(cliente instanceof Cliente){
+      this.#cliente = cliente;
+    }
+  }
+
+  get cliente(){
+    return this.#cliente;
+  }
+
+  get saldo(){
+    return this.#saldo;
+  }
 
   constructor(agencia,saldo,cliente){
     this.agencia = agencia;
     this.cliente = cliente;
-  }
-
-  mostrarSaldo(){
-    console.log(this.#saldo);
   }
 
   depositar(valor){
