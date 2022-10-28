@@ -1,5 +1,4 @@
 class Cliente{
-
   constructor(nome,cpf){
     this.nome = nome;
     this.cpf = cpf;
@@ -8,22 +7,39 @@ class Cliente{
 
 class ContaCorrente{
 
+  #saldo = 0;
+
   constructor(agencia,saldo){
     this.agencia = agencia;
-    this.saldo = saldo;
   }
 
   depositar(valor){
-    this.saldo = this.saldo + valor;
-    console.log("deposito realizado com sucesso!");
+    if(valor > 0){
+      this.#saldo += valor;
+      console.log("deposito realizado com sucesso!");
+    }
   }
 
+  saque(valor){
+    if(!this.saldo<valor && !this.saldo<=0){
+      this.#saldo -= valor;
+      console.log("saque realizado com sucesso!");
+    }  
+  }
+
+  transferencia(valor, beneficiado){
+    if(this.#saldo>valor && this.#saldo>0){
+      this.#saldo -= valor;
+      console.log("transferência para "+beneficiado+" realizada com sucesso!");
+    }
+  }
 }
 
-const cliente1 = new Cliente("Emerson","12334545670", "001", 1000);
-const cliente1ContaCorrente = new ContaCorrente("001",0);
+const cliente1 = new Cliente("Emerson","12334545670");
+const cliente1ContaCorrente = new ContaCorrente("001",1000);
 
 console.log(cliente1,"\n",cliente1ContaCorrente);
 
-cliente1ContaCorrente.depositar(600);
-console.log(cliente1ContaCorrente.saldo);
+cliente1ContaCorrente.depositar(10000);
+
+cliente1ContaCorrente.transferencia(400,"Jandira");
