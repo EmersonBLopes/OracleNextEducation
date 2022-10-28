@@ -1,0 +1,16 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Projeto do bytebank para seus clientes",
+  "main": "index.js",
+  "type": "module", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "OracleNextEducation"
+  },
+  "author": "Emerson",
+  "license": "ISC"
+}
