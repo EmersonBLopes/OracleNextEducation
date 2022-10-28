@@ -1,9 +1,19 @@
 export class ContaCorrente{
 
+  //campo privado
+  
   #saldo = 0;
 
-  constructor(agencia,saldo){
+  //campo público 
+
+
+  constructor(agencia,saldo,cliente){
     this.agencia = agencia;
+    this.cliente = cliente;
+  }
+
+  mostrarSaldo(){
+    console.log(this.#saldo);
   }
 
   depositar(valor){
@@ -14,16 +24,16 @@ export class ContaCorrente{
   }
 
   saque(valor){
-    if(!this.saldo<valor && !this.saldo<=0){
       this.#saldo -= valor;
-      console.log("saque realizado com sucesso!");
-    }  
   }
 
   transferencia(valor, beneficiado){
     if(this.#saldo>valor && this.#saldo>0){
-      this.#saldo -= valor;
-      console.log("transferência para "+beneficiado+" realizada com sucesso!");
+      this.saque(valor);
+      beneficiado.depositar(valor);
+      console.log("transferência para "+beneficiado.cliente.nome+" realizada com sucesso!");
+    }else{
+      console.log("Saldo insuficiente");
     }
   }
 }
