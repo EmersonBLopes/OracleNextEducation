@@ -13,6 +13,4 @@ cliente1ContaCorrente.depositar(10000);
 
 cliente1ContaCorrente.transferencia(10,cliente2ContaCorrente);
 
-console.log(cliente1ContaCorrente);
-console.log(cliente1ContaCorrente.saldo);
-console.log(cliente2ContaCorrente.saldo);
+console.log(ContaCorrente.numeroDeContas);

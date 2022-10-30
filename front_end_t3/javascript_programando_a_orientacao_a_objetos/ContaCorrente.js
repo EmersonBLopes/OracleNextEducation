@@ -6,6 +6,7 @@ export class ContaCorrente{
   
   #saldo = 0;
   #cliente;
+  static numeroDeContas = 0;
 
   //campo público 
 
@@ -26,6 +27,7 @@ export class ContaCorrente{
   constructor(agencia,saldo,cliente){
     this.agencia = agencia;
     this.cliente = cliente;
+    ContaCorrente.numeroDeContas++;
   }
 
   depositar(valor){
