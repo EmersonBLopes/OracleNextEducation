@@ -1,54 +1,15 @@
-import {Cliente} from "./Cliente.js";
+import { Conta } from "./Conta.js";
 
-export class ContaCorrente{
-
-  //campo privado
-  
-  #saldo = 0;
-  #cliente;
-  static numeroDeContas = 0;
-
-  //campo público 
-
-  set cliente(cliente){
-    if(cliente instanceof Cliente){
-      this.#cliente = cliente;
+export class ContaCorrente extends Conta{
+    static numeroDeContas = 0;
+    constructor(cliente, agencia) {
+        super(0,cliente, agencia);
+        ContaCorrente.numeroDeContas += 1;
     }
-  }
 
-  get cliente(){
-    return this.#cliente;
-  }
-
-  get saldo(){
-    return this.#saldo;
-  }
-
-  constructor(agencia,saldo,cliente){
-    this.agencia = agencia;
-    this.cliente = cliente;
-    ContaCorrente.numeroDeContas++;
-  }
-
-  depositar(valor){
-    if(valor > 0){
-      this.#saldo += valor;
-      console.log("deposito realizado com sucesso!");
+    //sobreescrevendo o comportamento de sacar
+    sacar(valor) {
+        let taxa = 1.1;
+        return this._sacar(valor, taxa);
     }
-  }
-
-  saque(valor){
-      this.#saldo -= valor;
-  }
-
-  transferencia(valor, beneficiado){
-    if(this.#saldo>valor && this.#saldo>0){
-      this.saque(valor);
-      beneficiado.depositar(valor);
-      console.log("transferência para "+beneficiado.cliente.nome+" realizada com sucesso!");
-    }else{
-      console.log("Saldo insuficiente");
-    }
-  }
 }
-
