@@ -27,9 +27,9 @@ export class Conta {
     return this._saldo;
   }
 
+  //este método se trata de um método abstrato sendo assim deve ser sobrescrito pelas as classes filhas.
   sacar(valor) {
-    let taxa = 1;
-    return this._sacar(valor, taxa);
+    throw new Error("O metodo sacar deve ser sobrescrito por um método de mesmo nome da classe filho pois, se trata de um método abstrato");
   }
 
   _sacar(valor, taxa) {
