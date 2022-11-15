@@ -1,7 +1,11 @@
 import BotaoConclui from "./concluiTarefa.js";
 import BotaoDeleta from "./deletaTarefa.js";
 
-export const criarTarefa = (dados) => {
+export const criarTarefa = (dados,tarefaId) => {
+
+  if(tarefaId == undefined){
+    tarefaId = localStorage.length;
+  };
 
   const lista = document.querySelector("[data-list]");
 
@@ -9,8 +13,9 @@ export const criarTarefa = (dados) => {
 
   tarefa.classList.add("task");
 
-  const conteudo = `<p class="content">${dados.data} * ${dados.valor}</p>`;
+  const conteudo = `<p class="content">${dados.data} * ${dados.valor} </p>`;
 
+  tarefa.dataset.tarefaId = tarefaId;
   tarefa.innerHTML = conteudo;
 
   tarefa.appendChild(BotaoConclui());
