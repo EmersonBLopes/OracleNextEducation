@@ -1,13 +1,12 @@
 import BotaoConclui from "./concluiTarefa.js";
 import BotaoDeleta from "./deletaTarefa.js";
+import {colocaElementoData} from "./colocaElementoData.js";
 
 export const criarTarefa = (dados,tarefaId) => {
 
   if(tarefaId == undefined){
     tarefaId = localStorage.length;
   };
-
-  const lista = document.querySelector("[data-list]");
 
   const tarefa = document.createElement("li");
 
@@ -20,6 +19,6 @@ export const criarTarefa = (dados,tarefaId) => {
 
   tarefa.appendChild(BotaoConclui());
   tarefa.appendChild(BotaoDeleta());
-  lista.appendChild(tarefa);
+  colocaElementoData(tarefa,dados);
 };
 
