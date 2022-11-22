@@ -20,26 +20,35 @@
 // }
 
 //consumno utilizando a fetch api
+const url = "http://localhost:3000/profile";
+
 function requisicaoHttp() {
-  const url = "http://localhost:3000/profile";
-  return fetch(url).then( resposta => {
+  return fetch(url).then((resposta) => {
     return resposta.json();
-  } );
+  });
 }
 
-function adicionaCliente(dados){
-  const url = "http://localhost:3000/profile";
-
-  fetch(url,{
-    method:"POST",
-    headers:{
-      "Content-type":"application/json"
+function adicionaCliente(dados) {
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
     },
-    body:JSON.stringify(dados)
-})
+    body: JSON.stringify(dados),
+  }).then((resposta) => {
+    return resposta.body;
+  });
+}
+
+function removerCliente(id){
+  const clienteUrl = url + `/${id}`;
+  return fetch(clienteUrl,{
+    method: "DELETE"
+  })
 }
 
 export const clienteService = {
   requisicaoHttp,
-  adicionaCliente
-}
+  adicionaCliente,
+  removerCliente
+};

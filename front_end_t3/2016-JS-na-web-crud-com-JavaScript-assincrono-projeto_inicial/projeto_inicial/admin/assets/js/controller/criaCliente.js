@@ -2,8 +2,6 @@ import {clienteService} from "../services/cliente-service.js";
 
 const formulario = document.querySelector("[data-form]");
 
-console.log(formulario),
-
 formulario.addEventListener("submit",(event)=>{
   event.preventDefault();
 
@@ -14,5 +12,9 @@ formulario.addEventListener("submit",(event)=>{
     nome,
     email
   }
-  clienteService.adicionaCliente(dados);
-})
+
+  clienteService.adicionaCliente(dados)
+  .then(()=>{
+    window.location.href = "../../../telas/cadastro_concluido.html";
+  })
+});
