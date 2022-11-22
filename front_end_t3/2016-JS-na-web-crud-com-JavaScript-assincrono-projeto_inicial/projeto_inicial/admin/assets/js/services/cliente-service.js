@@ -27,6 +27,19 @@ function requisicaoHttp() {
   } );
 }
 
+function adicionaCliente(dados){
+  const url = "http://localhost:3000/profile";
+
+  fetch(url,{
+    method:"POST",
+    headers:{
+      "Content-type":"application/json"
+    },
+    body:JSON.stringify(dados)
+})
+}
+
 export const clienteService = {
-  requisicaoHttp
+  requisicaoHttp,
+  adicionaCliente
 }

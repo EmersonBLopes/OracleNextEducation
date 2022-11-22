@@ -1,4 +1,4 @@
-import {clienteService} from "./cliente-service.js";
+import {clienteService} from "../services/cliente-service.js";
 
 const tabelaClientes = document.querySelector("[data-tabela]");
 
@@ -25,3 +25,4 @@ clienteService.requisicaoHttp().then((data) => {
     tabelaClientes.appendChild(adicionarCliente(cliente.nome, cliente.email));
   });
 });
+
