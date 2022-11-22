@@ -47,8 +47,18 @@ function removerCliente(id){
   })
 }
 
+function detalhaCliente(id){
+  const clienteUrl = url + `/${id}`;
+  return fetch(clienteUrl,{
+    method:"GET"
+  }).then((reposta)=>{
+    return reposta.json();
+  });
+}
+
 export const clienteService = {
   requisicaoHttp,
   adicionaCliente,
-  removerCliente
+  removerCliente,
+  detalhaCliente
 };
