@@ -19,21 +19,29 @@ function adicionarCliente(nome, email, id) {
   return elementoCliente;
 }
 
-tabelaClientes.addEventListener("click",(event)=>{
-  const ehBotaoExcluir = event.target.className == "botao-simples botao-simples--excluir";
+tabelaClientes.addEventListener("click", (event) => {
+  const ehBotaoExcluir =
+    event.target.className == "botao-simples botao-simples--excluir";
 
-  if(ehBotaoExcluir){
+  if (ehBotaoExcluir) {
     let tdCliente = event.target.closest("tr");
-    let clienteId = tdCliente.querySelector("[data-td]").dataset.td
-    clienteService.removerCliente(clienteId).then(()=>{
+    let clienteId = tdCliente.querySelector("[data-td]").dataset.td;
+    clienteService.removerCliente(clienteId).then(() => {
       tdCliente.remove();
     });
   }
-})
-
-clienteService.requisicaoHttp().then((data) => {
-  data.forEach((cliente) => {
-    tabelaClientes.appendChild(adicionarCliente(cliente.nome, cliente.email, cliente.id));
-  });
 });
+
+const render = async () => {
+
+  const listaClientes = await clienteService.requisicaoHttp();
+  
+  listaClientes.forEach((cliente) => {
+    tabelaClientes.appendChild(
+      adicionarCliente(cliente.nome, cliente.email, cliente.id)
+    );
+  });
+};
+
+window.addEventListener("load", render);
 
