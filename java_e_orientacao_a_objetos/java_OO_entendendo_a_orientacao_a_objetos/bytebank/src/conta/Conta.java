@@ -21,4 +21,20 @@ public class Conta{
     
   }
 
+  public void transfere(double valor, Conta destino){
+
+    if(this == destino){
+      System.out.println("Não é possível realizar transferência para a mesma conta");
+      return;
+    }
+
+
+    if(sacar(valor)){
+      destino.depositar(valor);
+      System.out.println("Transferência realizada com sucesso!");
+    }else{
+      System.out.println("Erro ao realizar a transferência.");
+    }
+  }
+
 }
