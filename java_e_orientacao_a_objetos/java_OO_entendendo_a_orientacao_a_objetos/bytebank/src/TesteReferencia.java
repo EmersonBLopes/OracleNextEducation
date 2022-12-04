@@ -1,9 +1,11 @@
+import bytebank.Conta;
+
 public class TesteReferencia{
 
   public static void main(String[] args){
 
     Conta primeiraConta = new Conta();
-    primeiraConta.saldo = 300;
+    primeiraConta.depositar(300);
 
     Conta segundaConta = primeiraConta;
 

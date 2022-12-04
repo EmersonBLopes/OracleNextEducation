@@ -1,3 +1,5 @@
+import bytebank.Conta;
+
 public class TestaMetodo{
   
   public static void main(String[] args){
@@ -11,6 +13,6 @@ public class TestaMetodo{
 
     contaDoZeze.transfere(500,contaDoZeze);
 
-    System.out.println(contaDoZeze.saldo+" "+contaDoEmerson.saldo); 
+    System.out.println(contaDoZeze.getSaldo()+" "+contaDoEmerson.getSaldo()); 
   }
 }
