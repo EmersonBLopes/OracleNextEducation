@@ -6,6 +6,17 @@ public class Conta{
     private int agencia, numero;
     private Cliente titular;
 
+    public Conta(int agencia, int numero){
+
+      if(agencia >=0 && numero >=0){
+        this.numero = numero;
+        this.agencia = agencia;
+      }else{
+        System.out.println("O numero da conta e agencia não podem ser menor do que 0");
+      }
+
+    }
+
     public Cliente getTitular(){
       return this.titular;
     }
