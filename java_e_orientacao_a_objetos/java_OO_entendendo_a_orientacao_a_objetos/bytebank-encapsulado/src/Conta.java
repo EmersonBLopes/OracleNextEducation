@@ -5,9 +5,10 @@ public class Conta{
     private double saldo;
     private int agencia, numero;
     private Cliente titular;
+    private static int totalDeContas;
 
     public Conta(int agencia, int numero){
-
+      Conta.totalDeContas++;
       if(agencia >=0 && numero >=0){
         this.numero = numero;
         this.agencia = agencia;
@@ -15,6 +16,10 @@ public class Conta{
         System.out.println("O numero da conta e agencia não podem ser menor do que 0");
       }
 
+    }
+
+    public static int getTotalDeContas(){
+      return Conta.totalDeContas;
     }
 
     public Cliente getTitular(){
