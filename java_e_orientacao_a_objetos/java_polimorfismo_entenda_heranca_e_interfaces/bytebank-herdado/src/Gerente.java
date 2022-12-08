@@ -4,7 +4,7 @@ public class Gerente extends Funcionario{
 
   private String senha= "0000";
 
-  public setSenha(String senha){
+  public void setSenha(String senha){
     this.senha = senha;
   }
 
@@ -16,4 +16,8 @@ public class Gerente extends Funcionario{
     
     return false;
   }
+
+    public double getBonificacao(){
+      return super.getBonificacao() + super.getSalario();
+    }
 }
