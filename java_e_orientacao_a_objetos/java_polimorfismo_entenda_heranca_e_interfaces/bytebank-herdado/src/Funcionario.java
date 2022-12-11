@@ -1,5 +1,13 @@
 package bytebank;
 
+/*
+métodos abstratos não contém corpo por conta disso o corpo do método dever ser especificado pela classe filha.
+
+ métodos abstratos só podem ser definidos dentro de classes abstratas.
+
+ a unica maneira de não ser obrigatório a implementação do corpo do método abstrato em uma classe filha é se a classe também for abstrata.
+ */
+
 public abstract class Funcionario {
 	
 	private String nome;
