@@ -4,7 +4,7 @@ public class SistemaInterno{
 
   private static String senha = "0000";
 
-  public static void autentica(FuncionarioAutenticavel f){
+  public static void autentica(Autenticavel f){
 
     boolean autenticou = f.autentica(senha);
 
