@@ -2,19 +2,20 @@ package bytebank;
 
 public class Administrador extends Funcionario implements Autenticavel{
 
-  private String senha;
+  private Autenticador autenticador;
 
-  public void setSenha(String senha){
-    this.senha = senha;
+  public Administrador(){
+    this.autenticador = new Autenticador();
   }
 
+  @Override
+  public void setSenha(String senha){
+    this.autenticador.setSenha(senha);
+  }
+
+  @Override
   public boolean autentica(String senha){
-
-    if(senha == this.senha){
-      return true;
-    }
-
-    return false;
+    return this.autenticador.autentica(senha);
   }
 
   @Override
