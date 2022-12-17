@@ -1,4 +1,4 @@
-public class FluxoComTratamento {
+public class FluxoComError {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
