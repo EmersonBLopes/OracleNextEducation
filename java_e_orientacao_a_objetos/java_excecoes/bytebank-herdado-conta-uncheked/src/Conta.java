@@ -1,5 +1,6 @@
 package bytebank;
 
+import java.text.DecimalFormat;
 import bytebank.exceptions.SaldoInsuficienteException;
 
 public class Conta{
@@ -74,7 +75,8 @@ public class Conta{
     public void sacar(double valor){
 
       if(!(checaValor(valor))){
-        throw new SaldoInsuficienteException("Operação de saque mal sucessedida, saldo insuficiente.\nSaldo: "+this.saldo+"\nValor de saque: "+valor);
+        DecimalFormat valorFormatado = new DecimalFormat("#.00");
+        throw new SaldoInsuficienteException("Operação de saque mal sucessedida, saldo insuficiente.\nSaldo: "+this.saldo+"\nValor de saque: "+valorFormatado.format(valor));
       }else{
         this.saldo -= valor;
       }

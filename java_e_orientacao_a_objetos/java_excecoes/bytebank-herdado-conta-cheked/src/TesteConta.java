@@ -1,5 +1,6 @@
 import bytebank.ContaCorrente;
 import bytebank.ContaPoupanca;
+import bytebank.exceptions.SaldoInsuficienteException;
 
 public class TesteConta{
 
@@ -8,7 +9,11 @@ public class TesteConta{
     ContaCorrente cc = new ContaCorrente(111,111);
     cc.depositar(100.0);
 
-    cc.sacar(90);
+    try{
+      cc.sacar(100);
+    }catch(Exception ex){
+      System.out.println("Ops!");
+    }
 
     ContaPoupanca cp = new ContaPoupanca(222,222);
     cp.depositar(250.0);
