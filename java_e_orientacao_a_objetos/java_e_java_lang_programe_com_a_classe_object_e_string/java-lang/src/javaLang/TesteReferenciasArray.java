@@ -4,19 +4,14 @@ public class TesteReferenciasArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Carro[] carros = new Carro[5];
+		Object[] veiculos = new Object[5];
 		
-		for(int i = 0; i<carros.length;i++) {
-			System.out.println(carros[i]);
-		}
+		veiculos[0] = new Carro("branco","fff");
+		veiculos[0] = new Moto("vermelha","f00");
 		
-		for(int i = 0; i<carros.length;i++) {
-			carros[i] = new Carro("Azul","f1f1");
-		}
+		System.out.println(veiculos[0]);
 		
-		for(int i = 0; i<carros.length;i++) {
-			System.out.println(carros[i]);
-		}
+		
 	}
 
 }
