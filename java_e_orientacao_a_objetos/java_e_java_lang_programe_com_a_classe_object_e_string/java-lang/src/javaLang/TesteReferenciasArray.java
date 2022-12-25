@@ -7,10 +7,8 @@ public class TesteReferenciasArray {
 		Object[] veiculos = new Object[5];
 		
 		veiculos[0] = new Carro("branco","fff");
-		veiculos[0] = new Moto("vermelha","f00");
-		
-		System.out.println(veiculos[0]);
-		
+		veiculos[1] = new Moto("vermelha","f00");
+		System.out.println(veiculos.length);
 		
 	}
 

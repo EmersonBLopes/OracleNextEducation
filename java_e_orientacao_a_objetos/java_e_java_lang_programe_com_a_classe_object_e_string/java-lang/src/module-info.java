@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author unknow
- *
- */
-module javaLang {
-}
