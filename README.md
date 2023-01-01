@@ -9,7 +9,7 @@
 - Lógica de programação I:heavy_check_mark:
 - Lógica de programação II:heavy_check_mark:
 
-#### Criar suas primeiras páginas web
+#### Criar suas primeiras páginas web:white_check_mark:
 
 - HTML 5 e CSS3 parte 1: crie uma página da Web:heavy_check_mark:
 
