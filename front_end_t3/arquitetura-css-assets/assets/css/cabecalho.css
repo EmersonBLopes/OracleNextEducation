@@ -1,0 +1,13 @@
+.cabecalho{
+  align-items:center;
+  background:#f9f9f9;
+  display:flex;
+  justify-content:space-between;
+  padding:0 2rem;
+}
+
+@media screen and (max-width:530px){
+  .menu__navegacao{
+    display:none;
+  }
+}

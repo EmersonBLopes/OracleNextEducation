@@ -1,0 +1,12 @@
+.rodape{
+  background:#bfbfbf;
+  text-align:center;
+  text-transform:lowercase;
+  padding:1.5624rem 5rem;
+}
+
+.contato__email{
+  font-weight: bold;
+  color:#fdfdfd;
+  text-decoration:none;
+}
