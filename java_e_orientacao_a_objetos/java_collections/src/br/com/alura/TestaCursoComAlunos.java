@@ -22,6 +22,8 @@ public class TestaCursoComAlunos {
 		
 		System.out.println("O aluno a1 esta matriculado?\n" +javaColecoes.estaMatriculado(a1));
 		System.out.println(javaColecoes.getListaDeAlunos());
+		
+		System.out.println(javaColecoes.buscaMatricula(6543));
 
 	}
 

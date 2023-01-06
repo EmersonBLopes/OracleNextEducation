@@ -1,9 +1,12 @@
 package br.com.alura;
 
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Collections;
 import java.util.Collection;
 import java.util.List;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class Curso {
@@ -11,6 +14,7 @@ public class Curso {
 	private String nome,instrutor;
 	private List<Aula> aulas = new ArrayList<Aula>();
 	private Collection<Aluno> alunos = new HashSet<Aluno>();
+	private Map<Integer,Aluno> matriculaParaAluno = new HashMap();
 	private int tempoTotal = 0;
 	
 	
@@ -59,16 +63,26 @@ public class Curso {
 	
 	public void matricula(String nome, int matricula) {
 		
-		alunos.add(new Aluno(nome,matricula));
+		Aluno a = new Aluno(nome,matricula);
+		
+		alunos.add(a);
+		matriculaParaAluno.put(a.getMatricula(),a);
 	}
 	
 	public void matricula(Aluno aluno) {
 		
 		alunos.add(aluno);
+		matriculaParaAluno.put(aluno.getMatricula(), aluno);
 	}
 	
 	public boolean estaMatriculado(Aluno aluno) {
 		return this.alunos.contains(aluno);
+	}
+	
+	public Aluno buscaMatricula(Integer matricula) {
+		
+		if(!matriculaParaAluno.containsKey(matricula)) throw new NoSuchElementException("Aluno não existe.");
+		return matriculaParaAluno.get(matricula);
 	}
 	
 	public int getTempoTotal() {
