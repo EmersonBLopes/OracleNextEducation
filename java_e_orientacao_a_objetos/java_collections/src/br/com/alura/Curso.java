@@ -61,6 +61,16 @@ public class Curso {
 		
 		alunos.add(new Aluno(nome,matricula));
 	}
+	
+	public void matricula(Aluno aluno) {
+		
+		alunos.add(aluno);
+	}
+	
+	public boolean estaMatriculado(Aluno aluno) {
+		return this.alunos.contains(aluno);
+	}
+	
 	public int getTempoTotal() {
 		
 		return this.tempoTotal;
