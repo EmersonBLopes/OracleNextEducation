@@ -1,9 +1,9 @@
 package lojavirtual;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 
 public class testaStatement {
@@ -15,9 +15,9 @@ public class testaStatement {
 		
 		System.out.println("Fechando conexão...");
 		
-		Statement state = con.createStatement();
+		PreparedStatement state = con.prepareStatement("SELECT * FROM produtos");
 		
-		if(state.execute("SELECT * FROM produtos")) {
+		if(state.execute()) {
 			ResultSet resultado = state.getResultSet();
 			
 			while(resultado.next()) {
