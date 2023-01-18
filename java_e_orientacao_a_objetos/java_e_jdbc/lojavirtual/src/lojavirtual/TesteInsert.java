@@ -15,7 +15,7 @@ public class TesteInsert {
 			con =  ConnectionFactory.recuperaConexao();
 			stm = con.createStatement();
 			
-			stm.executeUpdate("INSERT INTO produtos(nome_produto,descricao)VALUES('iPhone X' ,'iPhone X seminovo, chama que da bom!')",Statement.RETURN_GENERATED_KEYS);
+			stm.executeUpdate("INSERT INTO produtos(nome_produto,descricao)VALUES('iPhone X' ,'iPhone X seminovo, chama que da bom!')");
 			 
 		}catch(SQLException ex){
 			System.out.println("A conexão com o banco de dados falhou. "+ex.getMessage());
