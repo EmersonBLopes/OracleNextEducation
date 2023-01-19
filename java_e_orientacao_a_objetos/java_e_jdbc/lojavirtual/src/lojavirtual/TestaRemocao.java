@@ -14,7 +14,7 @@ public class TestaRemocao {
 			con = ConnectionFactory.recuperaConexao();	
 			
 			PreparedStatement stm = con.prepareStatement("DELETE FROM produtos WHERE ID = ?");
-			stm.setInt(1, 6);
+			stm.setInt(1, 7);
 			
 			stm.execute();
 			System.out.println(stm.getUpdateCount());

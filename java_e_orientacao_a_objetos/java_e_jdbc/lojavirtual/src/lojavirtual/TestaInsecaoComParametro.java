@@ -4,7 +4,16 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 
-public class TestaInsecaoComParametro {
+public class TestaInsecaoComParametro {	
+	
+	private static void inserirDados(String nomeProduto, String descricaoProduto, PreparedStatement stm) throws SQLException{
+		
+		stm.setString(1, nomeProduto);
+		stm.setString(2, descricaoProduto);
+		
+		stm.execute();
+	}
+
 
 	public static void main(String[] args) {
 		
@@ -15,10 +24,7 @@ public class TestaInsecaoComParametro {
 			con =  ConnectionFactory.recuperaConexao();
 			stm = con.prepareStatement("INSERT INTO produtos(nome_produto,descricao)VALUES(?,?)");
 			
-			stm.setString(1, "Televisão Oled 4k LG");
-			stm.setString(2, "Perfeita para assistir aquele domigão do faustop");
-			
-			stm.execute();
+			TestaInsecaoComParametro.inserirDados("","",stm);
 			
 			//stm.executeUpdate("INSERT INTO produtos(nome_produto,descricao)VALUES('iPhone X' ,'iPhone X seminovo, chama que da bom!')");
 			 
