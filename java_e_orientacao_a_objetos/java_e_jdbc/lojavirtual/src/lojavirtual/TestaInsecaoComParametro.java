@@ -15,21 +15,29 @@ public class TestaInsecaoComParametro {
 	}
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		
-		Connection con = null;
-		PreparedStatement stm = null;
+		Connection con =  ConnectionFactory.recuperaConexao();
 		
-		try {
-			con =  ConnectionFactory.recuperaConexao();
-			stm = con.prepareStatement("INSERT INTO produtos(nome_produto,descricao)VALUES(?,?)");
+		
+		try(PreparedStatement stm = con.prepareStatement("INSERT INTO produtos(nome_produto,descricao)VALUES(?,?)")) {
 			
-			TestaInsecaoComParametro.inserirDados("","",stm);
+			con.setAutoCommit(false);
 			
+			TestaInsecaoComParametro.inserirDados("Playstation 4 1TB","PS4 usado",stm);
+			TestaInsecaoComParametro.inserirDados("Xbox One 1TB","Xbox One semi novo",stm);
+			
+			con.commit();
 			//stm.executeUpdate("INSERT INTO produtos(nome_produto,descricao)VALUES('iPhone X' ,'iPhone X seminovo, chama que da bom!')");
 			 
 		}catch(SQLException ex){
+			
+			ex.printStackTrace();
 			System.out.println("A conexão com o banco de dados falhou. "+ex.getMessage());
+			System.out.println("Executando o rollback...");
+			con.rollback();
+		}finally {
+			con.close();
 		}
 		
 		
