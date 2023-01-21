@@ -17,7 +17,7 @@ public abstract class ConnectionFactory{
 			bds.setUrl(url);
 			bds.setUsername(user);
 			bds.setPassword(password);
-			bds.setMaxIdle(15);
+			bds.setMaxTotal(15);
 			
 			return bds.getConnection();
 		}
