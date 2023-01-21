@@ -2,16 +2,24 @@ package lojavirtual;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.DriverManager;
 
-public class ConnectionFactory{
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public abstract class ConnectionFactory{
 	
+	private static String url = "jdbc:mysql://localhost:3306/loja_virtual";
 	private static String password = "123456";
 	private static String user = "root";
 
 	public static Connection recuperaConexao() throws SQLException{
 		
-		return DriverManager.getConnection
-				("jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC", ConnectionFactory.user, ConnectionFactory.password);
+		try (BasicDataSource bds = new BasicDataSource()) {
+			bds.setUrl(url);
+			bds.setUsername(user);
+			bds.setPassword(password);
+			bds.setMaxIdle(15);
+			
+			return bds.getConnection();
+		}
 	}
 }

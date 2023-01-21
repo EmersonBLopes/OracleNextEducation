@@ -7,4 +7,5 @@
  */
 module lojavirtual {
 	requires java.sql;
+	requires commons.dbcp2;
 }
